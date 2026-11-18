@@ -16,6 +16,18 @@ Aplicación web interactiva con estética **Cyberpunk / Dark Mode Arcade**, desa
 * **Búsqueda y Filtrado Instantáneo:** Filtrado por categorías desde el menú lateral o selector superior y búsqueda en tiempo real mediante consultas `SQL LIKE`.
 
 ---
+Funcionamiento de la persistencia local
+El motor relacional de FRASES ÉPICAS ejecuta SQLite íntegramente en la memoria del navegador mediante WebAssembly (sql.js). Cada vez que el usuario realiza una operación de escritura (INSERT, UPDATE o DELETE), la base de datos se exporta como un arreglo binario (Uint8Array) y se almacena de forma automática en localStorage.
+Nota importante: Debido a que la persistencia ocurre en el almacenamiento local del navegador, los registros, cuentas creadas y puntuaciones se conservan al recargar o cerrar la pestaña en el mismo dispositivo, sin sincronización automática entre navegadores o equipos distintos.
+---
+Propósito del proyecto
+FRASES ÉPICAS nace con el propósito de transformar la gestión tradicional de registros en una experiencia recreativa digital envolvente. En lugar de presentar un formulario estático convencional, la plataforma convierte cada cita icónica en una pieza coleccionable que compite por alcanzar los primeros puestos del Salón de la Fama gracias a la interacción y el sistema de votación de la comunidad.
+"Las partidas terminan, las frases épicas permanecen." 👾
+
+---
+Autor
+Proyecto desarrollado por Juan René Flores Hernández
+---
 
 ## Arquitectura del Proyecto (Patrón MVC)
 
